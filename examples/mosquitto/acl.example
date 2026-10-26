@@ -1,0 +1,18 @@
+# Replace sample users and prefix. Repeat both blocks for every Wink Relay.
+user wink-kitchen
+topic write wink_relay_kitchen/relays/0/state
+topic write wink_relay_kitchen/relays/1/state
+topic write wink_relay_kitchen/sensors/temperature
+topic write wink_relay_kitchen/sensors/humidity
+topic write wink_relay_kitchen/screen/state
+topic read wink_relay_kitchen/relays/0
+topic read wink_relay_kitchen/relays/1
+
+user smartthings-kitchen
+topic read wink_relay_kitchen/relays/0/state
+topic read wink_relay_kitchen/relays/1/state
+topic read wink_relay_kitchen/sensors/temperature
+topic read wink_relay_kitchen/sensors/humidity
+topic read wink_relay_kitchen/screen/state
+topic write wink_relay_kitchen/relays/0
+topic write wink_relay_kitchen/relays/1
