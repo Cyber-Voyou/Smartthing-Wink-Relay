@@ -1,0 +1,6 @@
+{
+  "name": "Smartthing - Wink Relay (Beta)",
+  "description": "Community SmartThings Edge driver for independent Wink Relay devices over local MQTT. Beta: review documentation and safety notes before use.",
+  "termsOfServiceUrl": "https://github.com/Cyber-Voyou/Smartthing-Wink-Relay/blob/main/README.md",
+  "type": "DRIVER"
+}
