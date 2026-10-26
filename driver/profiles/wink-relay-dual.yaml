@@ -1,0 +1,23 @@
+name: wink-relay-dual
+components:
+  - id: main
+    label: Upper relay
+    capabilities:
+      - {id: switch, version: 1}
+      - {id: outsideclever46212.rezotikWinkStatus, version: 1}
+      - {id: temperatureMeasurement, version: 1}
+      - {id: relativeHumidityMeasurement, version: 1}
+    categories: [{name: Switch}]
+  - id: lower
+    label: Lower relay
+    capabilities: [{id: switch, version: 1}]
+    categories: [{name: Switch}]
+preferences:
+  - {name: mqttHost, title: MQTT broker host or IPv4, required: false, preferenceType: string, definition: {stringType: text, minLength: 1, maxLength: 253}}
+  - {name: mqttPort, title: MQTT broker port, required: true, preferenceType: integer, definition: {minimum: 1, maximum: 65535, default: 1883}}
+  - {name: mqttPrefix, title: Wink MQTT topic prefix, required: false, preferenceType: string, definition: {stringType: text, minLength: 1, maxLength: 96}}
+  - {name: mqttUsername, title: Dedicated MQTT username, required: false, preferenceType: string, definition: {stringType: text, minLength: 1, maxLength: 128}}
+  - {name: mqttPassword, title: Dedicated MQTT password, required: false, preferenceType: string, definition: {stringType: password, minLength: 1, maxLength: 128}}
+  - {name: singleLight, title: One light (hide lower relay), required: true, preferenceType: boolean, definition: {default: false}}
+  - {name: mqttEnabled, title: Enable MQTT connection, required: true, preferenceType: boolean, definition: {default: false}}
+  - {name: mqttRiskAccepted, title: Accept MQTT credential-storage risks, required: true, preferenceType: boolean, definition: {default: false}}
