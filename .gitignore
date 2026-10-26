@@ -1,0 +1,10 @@
+.DS_Store
+.idea/
+.vscode/
+.private/
+*.password
+*.secret
+*.key
+*.pem
+dist/
+validation/
