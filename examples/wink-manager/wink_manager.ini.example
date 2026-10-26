@@ -1,0 +1,25 @@
+# Copy to /sdcard/wink_manager.ini on one rooted Wink Relay.
+# Never commit real credentials. Use a unique prefix and client ID per device.
+mqtt_clientid=wink-relay-kitchen
+mqtt_topic_prefix=wink_relay_kitchen
+mqtt_address=tcp://192.168.1.10:1883
+mqtt_username=wink-kitchen
+mqtt_password=REPLACE_WITH_A_LONG_UNIQUE_PASSWORD
+
+screen_timeout=20
+proximity_threshold=5000
+temperature_threshold=100
+humidity_threshold=100
+hide_status_bar=true
+send_proximity_trigger=false
+send_screen_state=true
+
+# Two independent lights: both buttons toggle their own relay and publish clicks.
+relay_upper_flags=3
+relay_lower_flags=3
+
+# For one light controlled by either physical button, use instead:
+# relay_upper_flags=3
+# relay_lower_flags=35
+
+# Do not set initial_relay_*_state unless startup switching is explicitly wanted.
