@@ -1,0 +1,7 @@
+name: SmartThings Wink Relay MQTT
+packageKey: community.wink-relay-mqtt
+description: Independent Wink Relay devices over a local MQTT broker
+vendorSupportInformation: Community project — see GitHub documentation
+permissions:
+  lan: {}
+  discovery: {}
