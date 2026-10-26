@@ -1,0 +1,11 @@
+name: validate
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get update && sudo apt-get install -y lua5.3
+      - run: find driver/src -name '*.lua' -print0 | xargs -0 -n1 luac5.3 -p
+      - run: lua5.3 tests/test.lua
+      - run: python3 tests/audit.py
